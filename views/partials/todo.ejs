@@ -1,0 +1,33 @@
+<div class="row d-flex justify-content-center mt-3">
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title mb-0 todo-list-header">Todo list</h3>
+      </div>
+      <div class="card-body">
+        <!-- Todo list form -->
+        <form class="todo-list-form">
+          <div class="input-group">
+            <input type="text" class="form-control todo-list-input" placeholder="Add you task">
+            <div class="input-group-btn">
+              <button class="btn btn-primary todo-list-add-btn" type="submit">Add</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Display todo list item -->
+        <div class="list-wrapper mt-2">
+          <ul class="d-flex flex-column-reverse todo-list">
+            <% for(var i = 0; i < todos.length; i++) { %>
+              <li class="list-item p-2" data-val="<%= todos[i].item %>">
+                <%= todos[i].item %>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/todo-list.js"></script>
